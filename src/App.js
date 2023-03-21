@@ -1,16 +1,19 @@
 import './App.css';
-import Boton from './component/Boton';
 import delightLogo from './img/delight.png';
+import Boton from './component/Boton';
+import Contador from './component/Contador';
+import{useState} from 'react';
 
 
 function App() {
-  
+
+  const [cantidadClick, setCantidadClick] = useState(0);
   const manejarClic = ()=> {
-    console.log('Clic')
-  }
+    setCantidadClick(cantidadClick + 1);
+  };
   const reiniciarContador =() =>{
-    console.log('Reiniciar');
-  }
+    setCantidadClick(0);
+  };
   return (
     <div className='App'>
       <div className='contenedor-de-logo'>
@@ -21,6 +24,8 @@ function App() {
         />
       </div>
       <div className='contenedor-contador'>
+        <Contador
+        cantidadClick = {cantidadClick} />
         <Boton
         texto= 'Clic'
         esBotonClic= {true}

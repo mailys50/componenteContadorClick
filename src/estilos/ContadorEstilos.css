@@ -1,0 +1,14 @@
+.contenedorContador{
+  min-width: 200px;
+  height: 200px;
+  font-size: 160px;
+  padding: 25px;
+  color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 9px solid white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+
+}
